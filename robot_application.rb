@@ -109,3 +109,17 @@ class CommandParser
       end  
     end
 end
+
+
+# Sample test data
+table = Table.new
+robot = Robot.new(table)
+command_parser = CommandParser.new(robot)
+
+commands = [
+  'PLACE 1,1,SOUTH',
+  'MOVE',
+  'REPORT'
+]
+
+commands.each { |command| command_parser.parse(command) }
